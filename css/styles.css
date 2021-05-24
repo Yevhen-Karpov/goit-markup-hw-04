@@ -27,6 +27,7 @@ img {
   --section-background: #f5f4fa;
   --button-hover: #188ce8;
   --span-header: #000000;
+  --fill-icon: #afb1b8;
 }
 
 body {
@@ -75,8 +76,21 @@ body {
 .mailtel {
   margin-left: auto;
 }
+.mailtel-item {
+  display: flex;
+  align-items: center;
+}
 .mailtel-item:not(:last-child) {
   margin-right: 50px;
+}
+.mail-icon,
+.tel-icon {
+  margin-right: 10px;
+  fill: currentColor;
+}
+.mail-icon {
+  width: 16px;
+  height: 12px;
 }
 .nav-link {
   display: flex;
@@ -117,8 +131,22 @@ body {
 }
 /*hero-box*/
 .hero {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #c4c4c4;
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url("../images/hero/Img.jpg");
 }
 
 .hero-title {
@@ -158,7 +186,12 @@ body {
 .feat-cont {
   display: flex;
 }
-
+.feature-icon {
+  display: flex;
+  padding: 25px 100px;
+  margin-bottom: 30px;
+  background-color: var(--section-background);
+}
 .group-feature:not(:last-child) {
   margin-right: 30px;
 }
@@ -174,7 +207,9 @@ body {
 .feature-text {
   line-height: 1.7;
 }
-
+.feature-icon-item {
+  margin: auto;
+}
 /*section-work*/
 .title {
   color: var(--title-text-color);
@@ -210,26 +245,100 @@ body {
 }
 .member-role {
   margin-top: 10px;
+  margin-bottom: 16px;
 }
 .member-name,
 .member-role {
   font-size: 16px;
   text-align: center;
 }
-
+.social {
+  width: 270px;
+}
+.social-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 206px;
+  height: 44px;
+  margin: 0 auto;
+}
+.social-list-icon {
+  fill: var(--fill-icon);
+}
+.social-list-link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--main-background);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-list-link:hover,
+.social-list-link:focus {
+  background-color: var(--accent-text-color);
+}
+.social-list-link:hover .social-list-icon,
+.social-list-link:focus .social-list-icon {
+  fill: var(--main-background);
+}
+/*Clients*/
+.clients {
+  display: flex;
+  justify-content: space-between;
+}
+.clients-icon {
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--fill-icon);
+  padding: 16px 32px;
+}
+.clients-link {
+  display: flex;
+  width: 106px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+}
+.clients-svg {
+  margin: auto;
+  fill: var(--fill-icon);
+}
+.clients-icon:hover .clients-svg,
+.clients-icon:focus .clients-svg {
+  fill: var(--accent-text-color);
+}
+.clients-icon:hover,
+.clients-icon:focus {
+  border-color: var(--accent-text-color);
+  cursor: pointer;
+}
 /*footer*/
 .footer-container {
   display: flex;
-  flex-direction: column;
   padding-top: 60px;
   padding-bottom: 60px;
+  align-items: baseline;
 }
 .logo-footer {
   margin-bottom: 20px;
 }
-.footer,
-.hero {
+.footer {
   background-color: var(--hero-footer-color);
+}
+.social-footer {
+  display: block;
+  width: 206px;
+  flex-direction: column;
+  margin-left: 70px;
+}
+.footer-social-title {
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--main-background);
+  margin-bottom: 20px;
 }
 .footer-contact {
   font-style: normal;
@@ -240,8 +349,10 @@ body {
   margin-bottom: 9px;
 }
 .addres {
+  display: flex;
   margin-top: 20px;
   margin-bottom: 60px;
+  width: 231px;
 }
 .addr {
   font-style: normal;
@@ -251,6 +362,9 @@ body {
 }
 .span-footer {
   color: var(--main-background);
+}
+.social-list-link-foot {
+  background-color: rgba(255, 255, 255, 0.1);
 }
 
 /*portfolio-page*/
@@ -268,11 +382,14 @@ body {
   cursor: pointer;
   border-style: none;
   padding: 6px 22px 6px 22px;
+  border-radius: 4px;
 }
 .btn-filter:hover,
 .btn-filter:focus {
   background-color: var(--accent-text-color);
   color: var(--main-background);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
 .li-button:not(:last-child) {
   margin-right: 8px;
@@ -305,4 +422,9 @@ body {
   padding-left: 24px;
   padding-bottom: 20px;
   padding-top: 20px;
+}
+.card-item:hover,
+.card-item:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
