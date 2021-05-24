@@ -191,6 +191,7 @@ body {
   padding: 25px 100px;
   margin-bottom: 30px;
   background-color: var(--section-background);
+  border-radius: 4px;
 }
 .group-feature:not(:last-child) {
   margin-right: 30px;
