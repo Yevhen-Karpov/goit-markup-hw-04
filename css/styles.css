@@ -71,7 +71,7 @@ body {
 }
 
 .anchor-item:not(:last-child) {
-  margin-right: 25px;
+  margin-right: 50px;
 }
 .mailtel {
   margin-left: auto;
@@ -211,6 +211,9 @@ body {
 .feature-icon-item {
   margin: auto;
 }
+.section-feature {
+  padding-bottom: 0;
+}
 /*section-work*/
 .title {
   color: var(--title-text-color);
@@ -239,14 +242,16 @@ body {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   padding-bottom: 30px;
 }
+.photo-team {
+  margin-bottom: 30px;
+}
 .member-name {
   color: var(--title-text-color);
   font-weight: 500;
-  margin-top: 30px;
+  margin-bottom: 10px;
 }
 .member-role {
-  margin-top: 10px;
-  margin-bottom: 16px;
+   margin-bottom: 16px;
 }
 .member-name,
 .member-role {
@@ -301,10 +306,10 @@ body {
   height: 60px;
   justify-content: center;
   align-items: center;
+ 
 }
 .clients-svg {
-  margin: auto;
-  fill: var(--fill-icon);
+   fill: var(--fill-icon);
 }
 .clients-icon:hover .clients-svg,
 .clients-icon:focus .clients-svg {
