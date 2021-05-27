@@ -103,7 +103,7 @@ body {
   display: flex;
   color: inherit;
   font-weight: 500;
-
+  align-items: center;
   letter-spacing: 0.02em;
 }
 .nav-link:hover,
